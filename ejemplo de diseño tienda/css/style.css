@@ -1,0 +1,368 @@
+:root{
+
+/*
+--primero: #7941c7;
+*/
+--primero: rgb(98, 95, 167);
+    --primero1: #5017a0;
+    --segundo:   #ffce00;
+    --segundo1: rgb(233,287,2);
+    --boton: #ff7b00;
+    --blanco: #fff;
+    --negro: #000;
+
+    --fuenteletra: 'Staatliches', cursiva;
+}
+
+
+html{
+    font-size: 50.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+
+    background-color: var(--primero) ;
+   font-size: 1.6rem;
+   line-height: 1.5;
+   
+}
+
+
+
+
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco)
+
+}
+
+a{
+    text-decoration: none;
+
+}
+
+img{
+    width: 100%;
+}
+
+
+    
+    
+    
+
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--segundo);
+    font-family: var(--fuenteletra);
+}
+
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* heder con  BEN  bloques */
+
+.header{
+    display: flex;
+    justify-content: center;
+    
+    }
+    .header__logo{
+        margin: 3rem 0;
+    }
+
+.navegacion{
+    background-color: var(--primero1);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.navegacion__enlace{
+   font-family: var(--fuenteletra); 
+    color: var(--blanco);
+    font-size: 3rem ;
+}
+
+
+/*
+responsibidad  para el nav de navegacion 
+
+.navegacion__enlace:last-of-type{
+margin-right: 0;
+
+}
+*/
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--segundo1);
+}
+
+.footer{
+
+    background-color: var(--primero1);
+    padding: 1rem 0;
+    margin-top: 2rem;
+
+}
+.footer__texto{
+    font-family: var(--fuenteletra);
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+
+
+/* imagen inicial o encabezado de imagen */
+/*
+
+.img-inicial{
+    background-image: url(../imagenes/01.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 300px;
+    
+    position: relative;
+   
+} 
+.contenido-img-inicial{
+    position: absolute;
+    background-color: rgba(0,0,0, .20);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+*/
+
+
+/* grid estilos de cuadicula 3x1
+formato de mosaico para la tienda en linea
+*/
+
+.grid{
+
+    display:grid;
+    /*formacion de 2X1*/
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    /*el gap anterior genera las sobras de separacion entre 
+    productos pro lo que tambien puede representarse como:
+    
+    column-gap: 2rem;
+    row-gap: 2rem;
+    */
+
+}
+@media (min-width: 768px) { 
+    .grid{
+        /*formacion de 3x1*/
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+
+/*estilo main */
+
+
+.producto{
+    background-color: var(--primero1);
+    padding: 1rem;
+
+}
+
+
+.producto__informacion{
+   
+}
+.producto__nombre{
+font-size: 3rem;
+}
+.producto__precio{
+font-size: 2.8rem;
+color: var(--segundo);
+}
+
+.producto__nombre,
+.producto__precio{
+ font-family: var(--fuenteletra);
+ margin: 1rem 0;
+text-align: center;
+}
+
+.grafico{
+min-height: 30rem;
+background-repeat: no-repeat ;
+background-size: cover;
+
+grid-column: 1/3;
+}
+
+.grafico--camisas{
+    grid-row: 2/3;
+    background-image: url(../img/grafico1.jpg);
+}
+
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+
+    grid-row: 8/9;
+}
+
+@media (min-width: 768px) {
+ 
+.grafico--node{
+    grid-row: 5/6;
+    grid-column: 2/4;
+}    
+}
+
+
+
+
+/*
+NOSOTROS
+movimiento que incluye la tancicion de la foto 
+en el formato responsivo 
+*/
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    }
+    
+
+
+
+@media (min-width: 768px) {
+
+    .nosotros{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        }
+            
+}
+
+
+
+.nosotros__contenido{
+    text-align: justify;
+
+}
+.nosotros__imagen{
+grid-row: 1/2;
+}
+
+@media (min-width: 768px) {
+    .nosotros__imagen{
+        grid-column: 2/3;
+    }
+    
+}
+
+
+/*bloques para la seccion de Nosotros*/
+
+
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .bloques{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
+
+
+.bloque{
+text-align: center;
+}
+.bloque__titulo{
+    margin: 0;
+}
+
+
+/*paginas del producto*/
+
+
+@media (min-width: 768px) {
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.formulario__campo{
+    /*o se pueden escribir todas las propiedades
+     border-color: black;
+    border-width: 1rem;
+    border-style: solid;
+    */
+    border: 1rem solid var(--primero1);
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: var(--fuenteletra);
+    padding: 1rem;
+    appearance: none;
+}
+
+.formulario__submit{ 
+    background-color: var(--segundo);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuenteletra);
+    padding: 2rem;
+    
+    transition: background-color .2s ease;
+    transition: font-size .2s ease;
+
+    grid-column: 1/3;
+}
+.formulario__submit:hover{
+    font-size: 2.4rem;
+    cursor: pointer;
+    background-color: var(--boton);
+}
+
+
