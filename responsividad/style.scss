@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+$sans-serif: "Open Sans";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.7;
+	font-family: $sans-serif;
+}
+
+h1 {
+  font-size: 4.8vw;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  position: relative;
+  height: 100vh;
+  border: 20px solid #fff;
+  padding: 20px;
+  box-shadow: 1px 4px 6px rgba(0,0,0,0.6);
+  overflow: hidden;
+  background-image: linear-gradient(105deg, rgba(0,0,0,0.1) 40%, transparent 40%);
+  
+  &--orange {
+    background-color: #d53;
+  }
+  
+  &--green {
+    background-color: #7b5;
+  }
+  
+  &--blue {
+    background-color: #348;
+  }
+  
+  &--purple {
+    background-color: #a29;
+  }
+}
+
+
+
+// Nav ----------
+// ------------------------------------------------
+
+.nav {
+	display: flex;
+}
+
+.nav__trigger {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 500;
+  
+  i {
+    transition-property: transform background-color;
+    transition-duration: 0.3s;
+    transition-delay: 0.3s;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    background-color: #fff;
+    
+    &:before,
+    &:after {
+      content:"";
+      transition-property: transform background-color;
+      transition-duration: 0.3s;
+      transition-delay: 0.3s;
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      left: 0;
+      background-color: #fff;
+    }
+    
+    &:before {
+      top: -8px;
+    }
+    
+    &:after {
+      top: 8px;
+    }
+  }
+  
+  // active -------------------------------
+  &.active {
+    i {
+      background-color: transparent;
+
+      &:before,
+      &:after {
+        top: 0px;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.nav__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition-property: visibility;
+}
+
+.nav__link {
+  $bg-color: #333;
+  display: block;
+  background-color: $bg-color;
+  padding: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  outline: 1px solid rgba(0,0,0,0.15);
+  
+  &:hover {
+    background-color: lighten($bg-color,7%);
+  }
+}
+
+
+//-----------------------------------------
+
+
+.nav1 {
+	$items: 4;
+	$duration: 0.4s;
+	$delay: 0.2s;
+	
+  &__list {
+		@extend .nav__list;
+		transition-delay: $duration + $delay * $items;
+		perspective: 150px;
+		
+		&.active {
+			transition-delay: 0s;
+			visibility: visible;
+
+			.nav1__link {
+				transform: translateY(0px) translateZ(0px);
+				opacity: 1;
+			}
+		}
+  }
+  
+  &__link {
+    @extend .nav__link;
+    transition:
+      transform $duration ease-in-out,
+      opacity $duration ease-in-out;
+    transform: translateY(0px) translateZ(-150px);
+    width: 50%;
+    height: 50%;
+    float: left;
+    opacity: 0;
+    
+    @for $i from 0 through $items {
+      &:nth-child(#{$i + 1}) {
+        transition-delay: $i * $delay;
+      }  
+    }
+  }
+}
+
+
+// ------------------------------------------------
+.nav2 {
+  $items: 4;
+  $duration: 0.35s;
+  $delay: 0.2s;
+  
+  &__list {
+    @extend .nav__list;
+	  transition-delay: $duration + $delay * $items;
+		
+		&.active {
+			visibility: visible;
+			transition-delay: 0s;
+
+			.nav2__link {
+				transform: translateY(0%);
+			}
+		}
+  }
+  
+  &__link {
+    @extend .nav__link;
+    transition: transform $duration ease-out;
+    width: 100% / $items;
+    height: 100%;
+    float: left;
+
+    @for $i from 0 through $items {  
+      &:nth-child(#{$i + 1}) {  
+        transition-delay: $i * $delay;
+      }
+    }
+    
+    &:nth-child(odd) {
+      transform: translateY(-100%);
+    }
+    
+    &:nth-child(even) {
+      transform: translateY(100%);
+    }
+  }
+}
+
+
+// ------------------------------------------------
+.nav3 {
+  $items: 4;
+  $duration: 0.45s;
+  $delay: 0.15s;
+  
+  &__list {
+    @extend .nav__list;
+    perspective: 100px;
+  	transition-delay: $duration + $delay * $items;
+		
+		&.active {
+			visibility: visible;
+			transition-delay: 0s;
+
+			.nav3__link {
+				transform: translateX(0) translateZ(0px);
+			}
+		}
+  }
+  
+  &__link {
+    @extend .nav__link;
+    transition: transform $duration ease-in;
+    transform: translateX(100%) translateZ(50px);
+    width: 100%;
+    height: 100% / $items;
+
+    @for $i from 0 through $items {  
+      &:nth-child(#{$i + 1}) {  
+        transition-delay: $i * $delay;
+      }  
+    }
+  }
+}
+
+
+// ------------------------------------------------
+.nav4 {
+  $items: 4;
+  $duration: 0.4s;
+  $delay: 0.2s;
+  
+   &__list {
+		@extend .nav__list;
+		transition-delay: $duration + $delay * $items;
+		 
+		&.active {
+			transition-delay: 0s;
+			visibility: visible;
+
+			.nav4__link {
+				transform: translateX(0) rotate(0deg);
+			}
+		}
+	}
+  
+  &__link {
+    @extend .nav__link;
+    transition: transform $duration ease-out;
+    transform: translateX(-200%) rotate(180deg);
+    width: 50%;
+    height: 50%;
+    float: left;
+
+    @for $i from 0 through $items {
+      &:nth-child(#{$i + 1}) {
+        transition-delay: $i * $delay;
+      }  
+    }
+  }
+}

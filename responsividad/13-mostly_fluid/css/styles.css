@@ -1,0 +1,80 @@
+html {
+    box-sizing: border-box;
+    font-size: 55.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+p {
+    text-align: justify;
+    font-size: 2rem;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/** CODIGO AQUI **/
+
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+  
+}
+
+
+.titulo{
+    font-size: 6rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    width: auto;
+    height: auto;
+    background-color: cornflowerblue;
+    column-gap: 8rem;
+   
+}
+
+
+.contenedor{
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+    
+}
+
+img{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .contenedor{width: 80%;}
+}
+@media (min-width: 992px) {
+    .contenedor{width: 60%;}
+}
