@@ -1,0 +1,280 @@
+:root{
+    --fuenteheading: 'PT Sans', sans-serif;
+    --funeteparrafos: 'Open Sans', sans-serif;
+
+    --primero: #8a4917;
+    --segundo: #ad9c6a;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 65.5%;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--funeteparrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+
+}
+
+
+.p-justificado{text-align: justify;}
+
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+
+    /*se puede omitir las lineas anteriores con 
+    width: min(90%, 120rem);
+    la cual aplica el valor miniposible y el maximo 
+    */
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4{
+    font-family: var(--fuenteheading);
+    line-height: 1.2;
+}
+h1{font-size: 4.8rem;}
+h2{font-size: 4rem;}
+h3{font-size: 3.2rem;}
+h4{font-size: 2.8rem;}
+
+
+img{ 
+    max-width: 100%;
+}
+
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-text{
+    text-align: center;
+}
+.webp .header{
+    background-image: url(img/banner.jpg);
+
+}
+.no-webp .header{
+    
+    background-image: url(img/banner.jpg);
+}
+
+
+.header{
+    background-image: url(img/banner.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+/*
+background-position: top center;
+*/
+}
+
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+.barra{
+    padding-top: 4rem;
+}
+
+
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top: 15rem;
+    }
+}
+.logo{
+ color: var(--blanco);
+}
+.logo__nombre{
+font-weight: 250;
+}
+.logo__bold{
+font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+    
+}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+.entrada{
+    border-bottom: .5px solid var(--segundo);
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+.boton{
+    display: block;
+    font-family: var(--fuenteheading);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+}
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block;
+    }
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+.boton--primario {
+    background-color: var(--negro);
+}
+
+.boton--seg{
+    background-color: var(--primero);
+}
+ .cursos{
+     list-style: none;
+ }
+ .widget-curso{
+     border-bottom: 1px solid var(--segundo);
+     margin-bottom: 2rem;
+
+ }
+/*seudo selector permite editar el ultimo 
+estilo que se inserto en la clase llamada ::_:;
+*/
+.widget-curso:last-of-type{
+    border:none;
+    margin-bottom: 0;
+}
+
+.widget-curso__label{
+    font-family: var(--fuenteheading);
+    font-weight: 2rem;
+}
+.widget-curso__info{
+    font-weight: normal;
+}
+.widget-curso__info,
+.widget-curso__label{
+    font-size: 2rem;
+}
+
+.footer{
+    background-color: var(--negro);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+
+}
+
+/*sobre nosotros*/
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+/*curso*/
+
+.curso{
+    padding: 8rem 0;
+    border-bottom: 1px solid var(--segundo);
+
+}
+@media (min-width: 768px) {
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+
+}
+.curso:last-of-type{
+    border: none;
+}
+
+/* lo correcto es reutilizar las en las lineas   178 186*/
+.curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.curso__info {
+    font-weight: normal;
+}
+.curso__label,
+.curso__info {
+    font-size: 2rem;
+}
+
+/*contacto*//** Contacto **/
+.contacto-bg {
+    background-image: url(img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--negro);
+
+}
+.campo__field--textarea {
+    height: 20rem;
+}

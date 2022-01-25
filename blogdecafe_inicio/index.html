@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>BLOGCAFE</title>
+
+    <!-- primera pagina que se espera cargar por el usuario-->
+    <!-- de preferencia utilizar un analisis o dashbord para ver en que 
+         pagina se mueven los usuario o pasan mas tiempo-->
+    <link rel="perfetch" href="nosotros.html">
+
+        
+    <!-- tipos de letra-->
+    <enlace rel="preconectar" href="https://fonts.googleapis.com">
+    <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+    <enlace href="https: //fonts.googleapis.com/css2? family= Staatliches & display=swap" rel="stylesheet">
+
+    <enlace rel="preconectar" href="https://fonts.googleapis.com">
+    <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+    <enlace href="https: //fonts.googleapis.com/css2? family= Staatliches & display=swap" rel="stylesheet">
+
+
+<!-- preload para cargar primiero -->
+<link rel="preload" href="style.css" as="style">
+<link rel="stylesheet" href="style.css">
+<link rel="preload" href="normalize.css" as="style">
+<link rel="stylesheet" href="normalize.css">
+
+    <title>cafeteria</title>
+
+
+</head>
+<body>
+    <header class="header">
+      
+      <div class="contenedor">
+          <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafe</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+
+                </nav>
+                    
+            </div>
+      </div>
+      
+        <div class="header__texto">
+            <h2 class="no-margin">Blog de Café con Leche</h2>
+            <p  class="no-margin">Practica para una mejor presentacion en html y css XD</p>
+        </div>
+        
+    </header>
+
+    <div class="contenedor contenido-principal">
+        <main class="blog">
+            <h3>Nuestro blog</h3>
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <!--picture permite agregar el formato srcset el cual 
+                        permitira cargar las opciones en caso de que el navegador 
+                        web no soporte la imagen se desplasara a la opcion de srcset-->
+                    <picture>
+                        <source srcset="img/blog1.webp" type="image/webp">
+                        <img loanding="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture> 
+                    
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Tipos de Grano de Cafe</h4>
+                    <p class="p-justificado">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+
+            </article>
+            <!-- fin del articulo-->
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source srcset="img/blog2.webp" type="image/webp">
+                    <img loanding="lazy" src="img/blog2.jpg" alt="imagen blog">
+                    </picture> 
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">3 Deliciosas Recetas de Café</h4>
+                    <p class="p-justificado">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+
+            </article>
+            
+            <!-- fin del articulo-->
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source srcset="img/blog3.webp" type="image/webp">
+                    <img loanding="lazy" src="img/blog3.jpg" alt="imagen blog">
+                    </picture> 
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Beneficios del Café</h4>
+                    <p class="p-justificado">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                        
+                    </div>
+
+            </article>
+            
+        </main>
+        <aside class="sidebar">
+            <h3>Nuestros Cursos y Talleres</h3>
+            <ul class="cursos no-padding">
+                <li class="widget-curso">
+                    <h4 class="no-margin"> Técnicas de extraccién de café</h4>
+                <p class="widget-cursp__label"> Precio:
+                    <span class="widget-curso__info">Gratis</span>
+                </p>
+                <p class="widget-curso__label">Cupo:
+                    <span class="widget-curso__info">20</span>
+                </p>
+                <a href="entrada.html" class="boton boton--seg">Leer Entrada</a>
+                        </li>
+
+
+
+                        <li class="widget-curso">
+                            <h4 class="no-margin">4 Recetas de cafe  para frincipantes</h4>
+                        <p class="widget-cursp__label"> Precio:
+                            <span class="widget-curso__info">Gratis</span>
+                        </p>
+                        <p class="widget-curso__label">Cupo:
+                            <span class="widget-curso__info">20</span>
+                        </p>
+                        <a href="entrada.html" class="boton boton--seg">Leer Entrada</a>
+                                </li>
+
+
+                                <li class="widget-curso">
+                                    <h4 class="no-margin">Taller para Tostar y Moler Grano</h4>
+                                <p class="widget-cursp__label"> Precio:
+                                    <span class="widget-curso__info">Gratis</span>
+                                </p>
+                                <p class="widget-curso__label">Cupo:
+                                    <span class="widget-curso__info">20</span>
+                                </p>
+                                <a href="entrada.html" class="boton boton--seg">Leer Entrada</a>
+                                        </li>
+
+            </ul>
+
+        </aside>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="contenedor">
+                <div class="barra">
+                      <a class="logo" href="index.html">
+                          <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafe</span></h1>
+                      </a>
+                      <nav class="navegacion">
+                          <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                          <a href="propuesta.html" class="navegacion__enlace">Propuesta</a>
+                          <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+      
+                      </nav>
+                          
+                  </div>
+            </div>    
+        
+        
+        </div>
+
+    </footer>
+
+    <script src="js/modernizr.js"></script>
+</body>
+</html>
