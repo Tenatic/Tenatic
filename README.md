@@ -12,7 +12,7 @@
 
 ## 📚 ¿Cómo empezar?
 
-1. **Clona el repositorio:** `git clone https://github.com/tu-usuario/tu-repositorio.git`
+1. **Clona el repositorio:** ``
 2. **Explora los archivos:** Navega a través de los ejemplos y proyectos en tu editor de texto o IDE favorito.
 3. **Experimenta y adapta:** Prueba el código, realiza modificaciones y adáptalo a tus propios proyectos y necesidades.
 
@@ -20,9 +20,6 @@
 
 Si deseas contribuir a este repositorio, por favor, abre un *issue* para discutir tus ideas o realiza un *pull request* con tus mejoras.
 
-## 📬 Contacto
-
-Para cualquier pregunta o comentario, no dudes en [abrir un *issue*](https://github.com/tu-usuario/tu-repositorio/issues) o contactarme directamente.
 
 ---
 
