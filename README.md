@@ -1,10 +1,7 @@
-¡Claro! Aquí tienes una introducción para tu repositorio de HTML en GitHub:
-
----
 
 # 📁 Mi Repositorio
 
-¡Bienvenido a mi repositorio de HTML! Aquí encontrarás una colección de proyectos y ejemplos desarrollados utilizando HTML. Este repositorio está diseñado para mostrar una variedad de técnicas y enfoques en la construcción de páginas web, desde estructuras básicas hasta diseños más complejos.
+¡Bienvenido a mi repositorio! Aquí encontrarás una colección de proyectos y ejemplos desarrollados utilizando HTML. Este repositorio está diseñado para mostrar una variedad de técnicas y enfoques en la construcción de páginas web, desde estructuras básicas hasta diseños más complejos.
 
 ## 🚀 ¿Qué encontrarás aquí?
 
